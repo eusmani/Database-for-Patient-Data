@@ -1,0 +1,74 @@
+CREATE TABLE patients (
+  patient_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  date_of_birth DATE,
+  sex CHAR(1),
+  hpo_terms TEXT,
+  notes TEXT
+);
+
+CREATE TABLE genes (
+  gene_id SERIAL PRIMARY KEY,
+  symbol TEXT,
+  description TEXT,
+  pli_score NUMERIC,
+  omim_disease_association TEXT
+);
+
+CREATE TABLE variants (
+  variant_id SERIAL PRIMARY KEY,
+  gene_id INT REFERENCES genes(gene_id),
+  hgvs_notation TEXT,
+  type TEXT,
+  clinvar_significance TEXT,
+  clinvar_review_status TEXT,
+  allele_frequency NUMERIC,
+  notes TEXT
+);
+
+CREATE TABLE patient_variants (
+  id SERIAL PRIMARY KEY,
+  patient_id INT REFERENCES patients(patient_id),
+  variant_id INT REFERENCES variants(variant_id),
+  inheritance_pattern TEXT,
+  phenotype_notes TEXT
+);
+
+CREATE TABLE orthologs (
+  ortholog_id SERIAL PRIMARY KEY,
+  variant_id INT REFERENCES variants(variant_id),
+  organism TEXT,
+  ortholog_symbol TEXT,
+  diopt_score INT,
+  go_terms TEXT
+);
+
+CREATE TABLE structural_variants (
+  sv_id SERIAL PRIMARY KEY,
+  gene_id INT REFERENCES genes(gene_id),
+  type TEXT,
+  source TEXT,
+  frequency NUMERIC,
+  coordinates TEXT,
+  notes TEXT
+); 
+
+
+Patients:
+We have a list of patients, including their names, birth dates, gender, and some medical notes.
+
+Genes:
+We also keep a list of genes (which are parts of DNA that determine traits and can sometimes cause diseases). For each gene, we store its name, what it does, and how risky it might be.
+
+Variants:
+Genes can have different versions or small changes called variants. We record details about these variants, like where they are in the gene, their type, and whether they're known to be related to diseases.
+
+Patient Variants:
+For each patient, we note which gene variants they have. This helps us understand if a patient has a particular genetic change that might affect their health.
+
+Orthologs:
+Sometimes, we compare human genes to those in other organisms (like mice or flies) to learn more. We keep track of these related genes and how similar they are.
+
+Structural Variants:
+Some genetic changes involve larger chunks of DNA (like missing or extra pieces). We store details about these larger changes, such as what type they are and where they occur.
