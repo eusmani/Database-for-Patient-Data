@@ -1,10 +1,10 @@
 CREATE TABLE genes (
-	gene_id SERIAL PRIMARY KEY,
-	symbol VARCHAR(20) NOT NULL,
-	full_name TEXT,
-	chromosome VARCHAR(10),
-	description TEXT,
-	associated_diseases TEXT
+	gene_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	symbol TEXT NOT NULL,
+	omim_id TEXT,
+	total_phenotypes INTEGER,
+	omim_entries INTEGER,
+	description TEXT
 );
 
 
