@@ -1,17 +1,11 @@
-Patients:
-We have a list of patients, including their names, birth dates, gender, and some medical notes.
+Patients: We have a list of patients, including their names, birth dates, gender, and some medical notes.
 
-Genes:
-We also keep a list of genes (which are parts of DNA that determine traits and can sometimes cause diseases). For each gene, we store its name, what it does, and how risky it might be.
+Genes: We also keep a list of genes (which are parts of DNA that determine traits and can sometimes cause diseases). For each gene, we store its name, what it does, and how risky it might be.
 
-Variants:
-Genes can have different versions or small changes called variants. We record details about these variants, like where they are in the gene, their type, and whether they're known to be related to diseases.
+Variants: Genes can have different versions or small changes called variants. We record details about these variants, like where they are in the gene, their type, and whether they're known to be related to diseases.
 
-Patient Variants:
-For each patient, we note which gene variants they have. This helps us understand if a patient has a particular genetic change that might affect their health.
+Patient Variants: For each patient, we note which gene variants they have. This helps us understand if a patient has a particular genetic change that might affect their health.
 
-Orthologs:
-Sometimes, we compare human genes to those in other organisms (like mice or flies) to learn more. We keep track of these related genes and how similar they are.
+Orthologs: Sometimes, we compare human genes to those in other organisms (like mice or flies) to learn more. We keep track of these related genes and how similar they are.
 
-Structural Variants:
-Some genetic changes involve larger chunks of DNA (like missing or extra pieces). We store details about these larger changes, such as what type they are and where they occur.
+Structural Variants: Some genetic changes involve larger chunks of DNA (like missing or extra pieces). We store details about these larger changes, such as what type they are and where they occur.
