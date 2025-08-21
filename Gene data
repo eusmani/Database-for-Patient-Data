@@ -1,18 +1,15 @@
 CREATE TABLE genes (
-	gene_id INTEGER PRIMARY KEY AUTOINCREMENT,
-	symbol TEXT NOT NULL,
-	omim_id TEXT,
-	total_phenotypes INTEGER,
-	omim_entries INTEGER,
-	description TEXT
+    gene_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    symbol TEXT NOT NULL,
+    omim_id TEXT,
+    total_phenotypes INTEGER,
+    omim_entries INTEGER,
+    description TEXT
 );
 
 CREATE INDEX idx_genes_symbol ON genes(symbol);
 CREATE INDEX idx_genes_omim_id ON genes(omim_id);
 
-
-INSERT INFO genes (gene symbol, Phenotype Distribution, OMIM ID, Total Phenotypes, OMIM Entries)
-VALUES
-('BRCA1', '113705', 'Breast Cancer, Ovarian Cancer, Prostate Cancer, Pancreatic Cancer, Male Breast Cancer', '6', '1')
-('TP53', '191170', 'Li-Fraumeni syndrome, Breast Cancer, Sarcoma, Brain Tumors, Adrenocortical carcinoma', '5', '1')
-('CTFR', '602421', 'Cystic Fibrosis, Congenital bilateral absence of vas deferens, Pancreatitis', '3', '1'));
+-- Insert data (excluding gene_id because it's AUTOINCREMENT)
+INSERT INTO genes (symbol, omim_id, total_phenotypes, omim_entries, description)
+VALUES ('BRCA1', '113705', 6, 1, 'Breast Cancer, Ovarian Cancer, Prostate Cancer, Pancreatic Cancer, Male Breast Cancer');
