@@ -1,11 +1,16 @@
-Patients: We have a list of patients, including their names, birth dates, gender, and some medical notes.
+The purpose of this code is to create a database that keeps patient clinical information and genetic data organized in one place. It connects details about patients, genes, variants, 
+and structural variants, while also including phenotype and ortholog data. This makes record-keeping more accurate, data easier to access, and helps with research on how genes relate 
+to patient health.
 
-Genes: We also keep a list of genes (which are parts of DNA that determine traits and can sometimes cause diseases). For each gene, we store its name, what it does, and how risky it might be.
 
-Variants: Genes can have different versions or small changes called variants. We record details about these variants, like where they are in the gene, their type, and whether they're known to be related to diseases.
+The purpose of this code is to...
 
-Patient Variants: For each patient, we note which gene variants they have. This helps us understand if a patient has a particular genetic change that might affect their health.
+- To create a database structure for storing genetic and clinical data.
 
-Orthologs: Sometimes, we compare human genes to those in other organisms (like mice or flies) to learn more. We keep track of these related genes and how similar they are.
+- To record patient information including demographics, HPO terms, and notes.
 
-Structural Variants: Some genetic changes involve larger chunks of DNA (like missing or extra pieces). We store details about these larger changes, such as what type they are and where they occur.
+- To store detailed gene information such as descriptions, pLI scores, and OMIM disease associations.
+
+- To capture genetic variants with annotations like HGVS notation, ClinVar significance, review status, and allele frequency.
+
+- To link patients to their variants and describe inheritance patterns and phenotype notes.
