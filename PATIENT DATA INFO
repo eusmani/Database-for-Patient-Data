@@ -1,4 +1,4 @@
-The purpose of this code is to create a database that keeps patient clinical information and genetic data organized in one place. It connects details about patients, genes, variants, 
+Objective: To create a database that keeps patient clinical information and genetic data organized in one place. It connects details about patients, genes, variants, 
 and structural variants, while also including phenotype and ortholog data. This makes record-keeping more accurate, data easier to access, and helps with research on how genes relate 
 to patient health.
 
