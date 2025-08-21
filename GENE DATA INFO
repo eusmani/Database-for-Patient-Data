@@ -1,0 +1,15 @@
+Objective: The goal of this code is to create a small database table that stores information about human genes and their related diseases (phenotypes). 
+           It sets up a structure for organizing gene data and then adds some real examples (like BRCA1, TP53, and CFTR).
+           
+
+The purpose of this code is to:
+
+- To create a structured database table for storing gene information.
+
+- To organize details such as gene symbols, OMIM IDs, phenotypes, and descriptions.
+
+- To make it easier to search genes quickly by adding indexes on gene symbol and OMIM ID.
+
+- To insert example data of well-known genes (BRCA1, TP53, CFTR) and their associated diseases.
+
+- To provide a foundation for research, analysis, or medical applications involving gene–disease relationships.
