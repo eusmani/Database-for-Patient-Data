@@ -10,6 +10,5 @@ CREATE TABLE genes (
 CREATE INDEX idx_genes_symbol ON genes(symbol);
 CREATE INDEX idx_genes_omim_id ON genes(omim_id);
 
--- Insert data (excluding gene_id because it's AUTOINCREMENT)
 INSERT INTO genes (symbol, omim_id, total_phenotypes, omim_entries, description)
 VALUES ('BRCA1', '113705', 6, 1, 'Breast Cancer, Ovarian Cancer, Prostate Cancer, Pancreatic Cancer, Male Breast Cancer');
