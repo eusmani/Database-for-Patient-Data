@@ -1,0 +1,13 @@
+Overview: The purpose of this project is to provide a simple example of storing biomedical data (genes and phenotypes) in Firestore using Python.
+
+The script:
+
+Connects to a Firebase project using a service account.
+
+Adds a gene document (BRCA1) with metadata.
+
+Adds associated phenotypes as a subcollection under the gene.
+
+Prints a confirmation message once data is successfully added.
+
+  
