@@ -1,0 +1,38 @@
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+cred = credentials.Certificate("serviceAccountKey.json")  
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
+
+doc_ref = db.collection("genedatainfo").document("PWYjMbX9lTKgNtvP6gL4")
+
+doc_ref.set({
+    "symbol": "BRCA1",
+    "full_name": "Breast cancer type 1 susceptibility protein",
+    "chromosome": "17q21.31",
+    "description": "Plays a role in maintaining genomic stability",
+    "associated_diseases": ["Breast carcinoma", "Ovarian carcinoma"]
+})
+
+phenotypes_ref = doc_ref.collection("phenotypes")
+
+phenotypes_ref.document("HP:0003002").set({
+    "name": "Breast carcinoma",
+    "description": "Malignant tumor of the breast"
+})
+
+phenotypes_ref.document("HP:0100615").set({
+    "name": "Ovarian carcinoma",
+    "description": "Malignant tumor of the ovary"
+})
+
+
+doc = doc_ref.get()
+if doc.exists:
+    print("Gene Data:", doc.to_dict())
+
+phenotypes = phenotypes_ref.stream()
+for ph in phenotypes:
+    print(f"{ph.id} => {ph.to_dict()}")
