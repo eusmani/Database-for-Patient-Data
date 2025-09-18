@@ -1,0 +1,12 @@
+Overview: This project shows how to store biomedical data in Firebase Firestore using Python.
+
+The script:
+
+Connects to a Firebase project with a service account.
+
+Creates a document for a gene (BRCA1) with detailed attributes such as full name, chromosome location, description, and associated diseases.
+
+Adds a subcollection of phenotypes linked to the gene.
+
+Fetches and prints the gene document and all phenotypes.
+
