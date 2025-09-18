@@ -1,0 +1,7 @@
+Overview: This project demonstrates how to connect a simple Vanilla JavaScript frontend to Firebase. The example uses a minimal HTML file and a JavaScript module (app.js) to interact with Firebase services such as Firestore or Authentication.
+
+Uses Firebase SDK for JavaScript
+
+Minimal setup with just index.html and app.js
+
+Ideal for beginners learning how to connect a frontend to Firebase without frameworks like React or Angular
